@@ -2,8 +2,8 @@ import requests
 import os
 from datetime import datetime
 
-TOKEN = os.environ.get(8667343851:AAHtjsQR-BT57jXBDYFr4NdWvC6R-qcRzUA)
-CHAT_ID = os.environ.get(1686479134)
+TOKEN = os.environ.get("BOT_TOKEN")
+CHAT_ID = os.environ.get("CHAT_ID")
 
 def send_digest():
     today = datetime.now().strftime("%Y-%m-%d")
@@ -32,4 +32,5 @@ def send_digest():
     requests.post(url, data=payload)
 
 if __name__ == "__main__":
+
     send_digest()
